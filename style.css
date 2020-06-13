@@ -1,0 +1,362 @@
+/* ELEMENTS */
+
+body {
+  overflow-x: hidden;
+}
+
+figure,
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+figcaption {
+  font-family: var(--header-font);
+}
+
+footer {
+  background-color: black;
+  min-height: 50px;
+  text-align: center;
+  /* width: 100vw; */
+}
+
+html {
+  /* COLOR SCHEME
+  https://coolors.co/969a97-d6d1cd-e5ece9-c60f7b-f90093
+  */
+
+  --dark-grey: #969a97;
+  --light-grey: #d6d1cd;
+  --off-white: #e5ece9;
+  --violet-red: #c60f7b;
+  --deep-pink: #f90093;
+
+  /* FONTS */
+  --header-font: 'Montserrat', Arial, Helvetica, sans-serif;
+  --text-font: 'Roboto', Georgia, 'Times New Roman', Times, serif;
+  --code-font: 'Cutive Mono', monospace;
+
+  /* COMPONENT SIZES */
+  --navbar-height: 7vmin;
+  --boxed-width: 1230px;
+  --max-article-width: 80vw;
+  --title-top-padding: 0.2em;
+  --project-box-width: 550px;
+  --project-box-br: 5px;
+
+  /* ELEMENT STYLES */
+
+  scroll-behavior: smooth;
+  font-size: calc(
+    1em + 1vw
+  ); /* Hat-tip https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/ */
+}
+
+html,
+body,
+nav {
+  margin: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-style: italic;
+}
+
+main {
+  background-color: var(--off-white);
+  min-height: 90vmin;
+}
+
+nav {
+  background-color: var(--deep-pink);
+  border-top: black 0.5vmin solid;
+  box-shadow: 0px -3px 15px black;
+  height: 60px;
+  min-height: var(--navbar-height);
+  padding: 5px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  font-family: var(--header-font);
+  font-weight: 600;
+  list-style-type: none;
+  margin: auto 0;
+  padding: 0 25px;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  color: black;
+  font-size: 0.6em;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--off-white);
+}
+
+p,
+p ul li {
+  font-family: var(--text-font);
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+/* CLASSES */
+
+.about {
+  background-color: var(--violet-red);
+  color: var(--off-white);
+}
+
+.about p {
+  color: var(--off-white);
+}
+
+.about p a {
+  color: var(--light-grey);
+}
+
+.about p a:hover {
+  color: var(--off-white); /* was light grey */
+}
+
+.articles {
+  margin: 0 auto;
+  max-width: var(--max-article-width);
+}
+
+.bar {
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.contact {
+  background-color: var(--off-white);
+}
+
+.contact-article p {
+  text-align: center;
+}
+
+.copyright {
+  color: var(--off-white);
+  display: block;
+  font-family: var(--header-font);
+  font-size: 0.6em;
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+
+.email {
+  font-size: 1.5em;
+}
+
+.github-repo-btn {
+  background-color: var(--deep-pink);
+  border-radius: 0 0 var(--project-box-br) 0;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.hero-h1 {
+  color: var(--off-white);
+  font-family: var(--header-font);
+  font-size: 2.3em;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-img {
+  background-attachment: scroll;
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('./img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65vh;
+  margin: 0;
+  position: relative;
+}
+
+.hero-p {
+  color: var(--deep-pink);
+  font-family: var(--text-font);
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.hero-txt {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: var(--max-article-width);
+}
+
+.live-demo-btn {
+  background-color: var(--violet-red);
+  border-radius: 0 0 0 var(--project-box-br);
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.logo {
+  margin: auto 0;
+  padding: 5px;
+}
+
+.logo a {
+  color: var(--off-white);
+  background-color: black;
+  border-radius: var(--project-box-br);
+  font-family: var(--code-font);
+  font-weight: 600;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.non-hero-section {
+  /* min-height: 100vh; */
+  padding: calc(60px + 1em) 0;
+  width: 100%;
+}
+
+.non-hero-section h2 {
+  font-family: var(--header-font);
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pink-link,
+.social-icons a i {
+  color: var(--violet-red);
+}
+
+.pink-link:hover,
+.social-icons a i:hover {
+  color: var(--deep-pink);
+}
+
+.project-btns {
+  border: none;
+  color: var(--off-white);
+  font-size: 0.8em;
+  font-family: var(--header-font);
+  min-height: 2em;
+  padding: 0.3em;
+}
+
+.project-btns:hover {
+  color: white;
+}
+
+.project-box {
+  align-content: space-between;
+  background-color: var(--light-grey);
+  border-radius: var(--project-box-br);
+  display: grid;
+  grid-gap: 0px;
+  margin: 10px;
+  max-width: 90vmin;
+  width: var(--project-box-width);
+}
+
+.project-box figure {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project-box summary {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project-imgs {
+  height: auto;
+  width: 100%;
+}
+
+.project-summaries {
+  font-family: var(--text-font);
+  padding: 3.1vmin;
+  font-size: 0.75em;
+  text-align: left;
+}
+
+.project-summaries ul {
+  padding-left: 6vmin;
+}
+
+.project-titles {
+  padding: 0.2em 0;
+}
+
+.projects {
+  background-color: var(--off-white);
+}
+
+.projects-article {
+  text-align: center;
+}
+
+.projects-container {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: var(--boxed-width);
+}
+
+.social-icons a i {
+  font-size: 2em;
+  padding: 0 5vmin;
+}
