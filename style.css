@@ -24,7 +24,6 @@ footer {
   background-color: black;
   min-height: 50px;
   text-align: center;
-  /* width: 100vw; */
 }
 
 html {
@@ -153,7 +152,7 @@ ul {
 }
 
 .about p a:hover {
-  color: var(--off-white); /* was light grey */
+  color: var(--off-white);
 }
 
 .articles {
@@ -264,7 +263,6 @@ ul {
 }
 
 .non-hero-section {
-  /* min-height: 100vh; */
   padding: calc(60px + 1em) 0;
   width: 100vw;
 }
