@@ -1,5 +1,9 @@
 /* ELEMENTS */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -59,7 +63,7 @@ html,
 body,
 nav {
   margin: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 h1,
@@ -93,9 +97,10 @@ nav {
   height: 60px;
   min-height: var(--navbar-height);
   padding: 5px;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 9999;
 }
 
@@ -212,7 +217,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   height: 65vh;
-  margin: 0;
+  margin: 60px 0 0 0;
   position: relative;
 }
 
@@ -261,7 +266,7 @@ ul {
 .non-hero-section {
   /* min-height: 100vh; */
   padding: calc(60px + 1em) 0;
-  width: 100%;
+  width: 100vw;
 }
 
 .non-hero-section h2 {
@@ -286,6 +291,7 @@ ul {
 .project-btns {
   border: none;
   color: var(--off-white);
+  cursor: pointer;
   font-size: 0.8em;
   font-family: var(--header-font);
   min-height: 2em;
@@ -307,6 +313,10 @@ ul {
   width: var(--project-box-width);
 }
 
+.project-box a {
+  text-decoration: none;
+}
+
 .project-box figure {
   grid-row-start: 1;
   grid-row-end: 2;
@@ -320,6 +330,7 @@ ul {
 }
 
 .project-imgs {
+  cursor: pointer;
   height: auto;
   width: 100%;
 }
